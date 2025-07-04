@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Graphic Designer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    /* Mobile menu styles */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background-color: white;
+      padding: 1rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      z-index: 40;
+    }
+    .mobile-menu.active {
+      display: block;
+    }
+    #mobile-menu-button {
+      z-index: 50;
+    }
+    .hidden-project {
+      display: none;
+    }
+  </style>
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold text-indigo-600">BLUE<span class="text-gray-800">PIXEL</span></a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="hover:text-indigo-600 transition">Tentang</a>
+        <a href="#skills" class="hover:text-indigo-600 transition">Skill</a>
+        <a href="#portfolio" class="hover:text-indigo-600 transition">Portofolio</a>
+        <a href="#contact" class="hover:text-indigo-600 transition">Kontak</a>
+      </div>
+      <button class="md:hidden" id="mobile-menu-button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div class="mobile-menu md:hidden hidden" id="mobile-menu">
+        <a href="#about" class="block py-3 px-4 hover:bg-indigo-50 rounded-md hover:text-indigo-600 transition">Tentang</a>
+        <a href="#skills" class="block py-3 px-4 hover:bg-indigo-50 rounded-md hover:text-indigo-600 transition">Skill</a>
+        <a href="#portfolio" class="block py-3 px-4 hover:bg-indigo-50 rounded-md hover:text-indigo-600 transition">Portofolio</a>
+        <a href="#contact" class="block py-3 px-4 hover:bg-indigo-50 rounded-md hover:text-indigo-600 transition">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center pt-20 pb-16 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          Transforming Ideas <span class="gradient-text">Into Visual Stories</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-lg">
+          Saya berkomitmen menghadirkan desain visual yang kuat dan elegan untuk membantu brand tampil lebih menonjol di mata audiens.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="px-8 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition shadow-lg hover:shadow-indigo-200">
+            Mari Bekerja Sama
+          </a>
+          <a href="#portfolio" class="px-8 py-3 border border-indigo-600 text-indigo-600 rounded-lg font-medium hover:bg-indigo-50 transition">
+            Lihat Portofolio
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -top-6 -left-6 w-full h-full bg-indigo-100 rounded-2xl -z-10"></div>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7fe969cd-04cb-4ac2-a83f-9c89a63ce227.png" alt="Graphic designer working on digital art with colorful interface on large monitor" class="rounded-2xl shadow-xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Tentang <span class="gradient-text">Saya</span></h2>
+        <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="aspect-w-1 aspect-h-1 relative overflow-hidden rounded-2xl shadow-lg">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/77a04e1f-fc87-46a9-ba12-c78bcae39330.png" alt="Young creative designer smiling in professional photo wearing casual outfit in warm indoor lighting" class="object-cover w-full h-full" />
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Halo, Saya Anggi</h3>
+          <p class="text-gray-600 mb-6">
+            Sebagai seorang desainer grafis yang baru terjun ke industri, saya membawa kreativitas, antusiasme, dan sudut pandang segar ke setiap proyek. Meskipun saya belum memiliki daftar klien yang panjang, portofolio saya menunjukkan dedikasi saya terhadap keunggulan desain dan kemampuan saya untuk belajar dengan cepat.
+          </p>
+          <p class="text-gray-600 mb-6">
+            Saya mengkhususkan diri dalam menciptakan desain yang menarik secara visual dan efektif dalam berkomunikasi. Pendekatan saya menggabungkan kepekaan estetika dengan pemikiran strategis untuk menghasilkan solusi yang indah sekaligus fungsional.
+          </p>
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="flex items-center">
+              <div class="mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500">Fokus Pengembangan</div>
+                <div class="font-medium">Desain grafis</div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500">Pengalama</div>
+                <div class="font-medium">Proyek Organisasi & Pribadi</div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500">Domisili</div>
+                <div class="font-medium">Banjarnegara, Indonesia</div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500">Ketersediaan</div>
+                <div class="font-medium">Terbuka untuk Proyek</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bagian Keterampilan -->
+    <section id="skills" class="py-20 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Kemampuan <span class="gradient-text">Saya</span></h2>
+        <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+            <!-- Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+            </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Identitas Merek</h3>
+            <p class="text-gray-600 mb-4">
+            Membuat logo dan identitas visual sederhana yang mencerminkan karakter sebuah brand atau organisasi.
+            </p>
+            <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Desain Logo</span>
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Panduan Brand</span>
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Identitas Visual</span>
+            </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+            <!-- Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Desain Cetak</h3>
+            <p class="text-gray-600 mb-4">
+            Mendesain kartu nama, brosur, poster, atau media cetak lain untuk keperluan organisasi, kegiatan, atau project pribadi.
+            </p>
+            <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Kartu Nama</span>
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Brosur & Poster</span>
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Kemasan Produk</span>
+            </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+            <!-- Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Desain Digital</h3>
+            <p class="text-gray-600 mb-4">
+            Membuat konten visual untuk media sosial, banner website, dan elemen digital lainnya untuk menunjang kehadiran online.
+            </p>
+            <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Media Sosial</span>
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Banner Website</span>
+            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Elemen UI</span>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</section>
+
+
+  <!-- Bagian Portofolio -->
+<section id="portfolio" class="py-20 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Portofolio <span class="gradient-text">Saya</span></h2>
+      <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+        Kumpulan karya terbaik saya dari berbagai project pribadi dan organisasi.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioItems">
+      
+      <!-- Item Portofolio 1 -->
+      <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+        <div class="project-image">
+          <img src="images/13.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold mr-2">Hari Gizi Nasional 2023 - Banjarnegara</h3>
+            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Kampanye Sosial</span>
+          </div>
+          <p class="text-gray-600 text-sm">
+            Kampanye visual Hari Gizi Nasional dengan fokus pada edukasi gizi dan keseimbangan makanan melalui tata letak yang informatif dan foto makanan sehat.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item Portofolio 2 -->
+      <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+        <div class="project-image">
+          <img src="images/14.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold mr-2">Majalah Matematika 2022</h3>
+            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Branding Jurusan</span>
+          </div>
+          <p class="text-gray-600 text-sm">
+            Desain sampul majalah tahunan HIMATIKA dengan pendekatan tipografi besar, sederhana, dan penggunaan warna gelap kontras kuning, mencerminkan keseriusan dan eksklusivitas konten akademik matematika.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item Portofolio 3 -->
+      <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+        <div class="project-image">
+          <img src="images/3.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold mr-2">Kampus Mengajar - Program Kemendikbud</h3>
+            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Program Edukasi</span>
+          </div>
+          <p class="text-gray-600 text-sm">
+            Desain digital yang mempromosikan program Kampus Mengajar untuk mahasiswa yang ingin menjadi mitra guru dengan penjelasan syarat dan alur pendaftaran secara terpadu.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item tambahan yang disembunyikan -->
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/1.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Pizza Fresh Bites</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Pesonal Proyek</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Proyek branding dan desain promosi makanan pizza dengan latar oranye yang menggugah selera, fokus pada visual pizza yang menggoda dengan tambahan daun mint sebagai penyegar, menyampaikan pesan "Fresh Bites" untuk pengalaman makan yang segar dan lezat.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/11.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Pemira FMIPA Unsoed 2022</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Event Promotion</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Serangkaian materi desain untuk sosialisasi dan kampanye Pemira KM FMIPA Unsoed dengan fokus pada pemilihan umum mahasiswa dan pesan demokrasi.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/16.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Spagetti</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Pesonal Proyek</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Proyek branding untuk restoran Spagetti yang menggabungkan elemen visual China dengan desain minimalis dan tipografi yang kuat untuk menonjolkan cita rasa autentik dan kualitas artisanal produk pizza.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/9.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Promosi Donut Factory</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Pesonal Proyek</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Material promosi untuk Donut Factory dengan pemakaian warna lembut dan fokus pada tekstur lembut donat serta topping melimpah. Bertujuan meningkatkan mood positif serta mengajak konsumen menikmati donat segar.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/18.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Press Release Kunjungan Ilmiah Online HIMATIKA</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Media Sosial</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Desain press release untuk acara kunjungan ilmiah online yang diadakan HIMATIKA Universitas Jenderal Soedirman, menghadirkan informasi detail secara profesional dan menarik dengan latar gedung pencakar langit yang merepresentasikan institusi.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/8.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Cookies Promo Poster</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Pesonal Proyek</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Poster promosi kue cookies dengan gaya desain modern dan pop art, memanfaatkan warna ungu dan kuning sebagai elemen kontras yang menarik perhatian. Memberikan deskripsi sensasi rasa chewy dan renyah yang memikat pelanggan.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/24.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Perpus Online HIMATIKA</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Media Sosial</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Desain untuk promosi perpustakaan online HIMATIKA yang memudahkan akses mahasiswa ke bahan bacaan dengan ilustrasi ramah dan kombinasi warna hijau toska yang menenangkan, menekankan kemudahan dan kenyamanan belajar.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/7.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Burger Queen Promo</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Pesonal Proyek</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Proyek branding untuk rpromosi burger dengan gaya kontras tinggi dan pencahayaan dramatis, menyoroti tekstur burger yang juicy dan roti lembut dengan warna-warna hangat untuk menarik perhatian konsumen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/22.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Porsi - Portal Aspirasi HIMATIKA</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Desain Informasi</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Desain poster informatif untuk portal aspirasi mahasiswa matematika, memudahkan komunikasi dan penyampaian kritik serta saran melalui platform digital yang user-friendly.
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/10.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Sandwich delight</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Pesonal Proyek</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Poster promosi sandwich dengan pendekatan visual yang segar dan elegan, menonjolkan layers isi sandwich dengan warna merah yang memberikan kesan hangat dan menggugah selera.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/2.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Layout Ig: Pemira KM MIPA UNSOED</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Media Sosial</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Material sosialisasi pemira fakultas MIPA dengan visual dinamis dan teks persuasif yang mengajak mahasiswa aktif berpatisipasi dalam demokrasi kampus.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/5.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Mading Desember HIMATIKA</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Desain Informasi</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Desain dan materi mading bertema Desember dengan nuansa modern dan fokus pada visual karakter game populer untuk menarik minat mahasiswa dan menginformasikan konten mading secara efektif.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/4.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Mading November HIMATIKA/h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Desain Informasi</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Mading November menggunakan gaya pixel art retro, memberikan suasana nostalgia dengan elemen-elemen pixel dan warna-warna cerah khas game klasik.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/21.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Open Recruitment Volunteers</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Media Sosial</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Poster rekrutmen volunteer untuk program Kampus Mengajar dengan desain profesional serta informasi lengkap terkait persyaratan dan proses pendaftaran bagi mahasiswa.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/12.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Mie Ayam</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Pesonal Proyek</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Proyek ini merupakan desain visual untuk menu Mie Ayam yang menonjolkan kelezatan serta daya tarik dari hidangan.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/15.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Cupcakes Berry Dream</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Pesonal Proyek</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Konsep desain mengedepankan elemen warna cerah dan visual lezat dari cupcakes, dengan fokus pada rasa cokelat yang kaya dan segarnya buah blueberry.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/6.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Bakso</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Pesonal Proyek</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Proyek ini menyajikan konsep visual yang menarik dari hidangan ikonik Bakso, dengan menekankan kelezatan dan filosofi di baliknya. Tujuan dari proyek ini adalah untuk meningkatkan daya tarik visual sebuah produk makanan agar lebih menarik bagi konsumen melalui elemen-elemen desain seperti warna, bentuk, dan komposisi. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden more-portfolio">
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+          <div class="project-image">
+            <img src="images/17.png" alt="Contoh Karya" class="w-full h-48 object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold mr-2">Donut Hill</h3>
+              <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs">Pesonal Proyek</span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Dengan penggunaan warna netral dan huruf yang artistik, karya ini menciptakan suasana yang mengundang selera, sekaligus menonjolkan produk donut. Komposisi berbasis pegunungan dan awan memberikan kedalaman visual, menjadikan proyek ini menarik dan estetik untuk promosi produk.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-12">
+      <button id="toggleBtn" class="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg font-medium hover:bg-indigo-50 transition">
+        Lihat Selengkapnya
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Tampilan Gambar Full -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+    <div class="relative">
+        <button id="closeModal" class="absolute top-2 right-2 text-white text-3xl">&times;</button>
+        <img id="modalImage" src="" alt="Tampilan Besar" class="max-h-[90vh] max-w-[90vw] rounded-lg">
+    </div>
+    </div>
+</section>
+
+ <!-- Bagian Kontak -->
+<section id="contact" class="py-20 px-6 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Hubungi <span class="gradient-text">Saya</span></h2>
+      <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+        Punya ide project atau ingin berdiskusi lebih lanjut? Silakan kirim pesan, saya akan dengan senang hati merespons.
+      </p>
+    </div>
+      
+      <div>
+        <div class="text-center bg-gradient-to-b from-white via-gray-50 to-gray-100 p-8 rounded-xl shadow-md">
+  <h3 class="text-xl font-bold mb-6 text-gray-900">Informasi Kontak</h3>
+  
+  <div class="flex flex-col md:flex-row justify-center items-center md:space-x-12 space-y-6 md:space-y-0">
+
+    <!-- Telepon -->
+    <div class="flex items-center space-x-3">
+      <div class="bg-indigo-100 p-3 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+      </div>
+      <div class="text-left">
+        <h4 class="font-medium text-gray-800">Telepon</h4>
+        <p class="text-gray-600 text-sm">+62 831 0639 0811</p>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="flex items-center space-x-3">
+      <div class="bg-indigo-100 p-3 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <div class="text-left">
+        <h4 class="font-medium text-gray-800">Email</h4>
+        <p class="text-gray-600 text-sm">anggisasmita101@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Lokasi -->
+    <div class="flex items-center space-x-3">
+      <div class="bg-indigo-100 p-3 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </div>
+      <div class="text-left">
+        <h4 class="font-medium text-gray-800">Lokasi</h4>
+        <p class="text-gray-600 text-sm">Banjarnegara, Indonesia</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mt-8">
+    <h4 class="font-medium text-gray-900 mb-4">Temui Saya di</h4>
+    <div class="flex justify-center space-x-4">
+      <!-- Sosial Media Ikon tetap -->
+            <!-- Ganti link sesuai akun pribadi -->
+            <a href="#" class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center hover:bg-indigo-200 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3b5998" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center hover:bg-indigo-200 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1DA1F2" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center hover:bg-indigo-200 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#2867B2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center hover:bg-indigo-200 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#E1306C" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <div>
+        <h3 class="text-xl font-bold mb-4">BLUE<span class="text-indigo-400">PIXEL</span></h3>
+        <p class="text-gray-400">
+          Layanan desain grafis kreatif untuk membantu brand Anda tampil menonjol dengan komunikasi visual yang menarik dan efektif.
+        </p>
+      </div>
+      
+      <div>
+        <h4 class="font-bold mb-4">Tautan Cepat</h4>
+        <ul class="space-y-2">
+          <li><a href="#about" class="text-gray-400 hover:text-white transition">Tentang</a></li>
+          <li><a href="#skills" class="text-gray-400 hover:text-white transition">Kemampuan</a></li>
+          <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portofolio</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="font-bold mb-4">Newsletter</h4>
+        <p class="text-gray-400 mb-4">
+          Berlangganan untuk mendapatkan update project terbaru dan tips desain dari saya.
+        </p>
+        <form class="flex">
+          <input type="email" placeholder="Email Anda" class="px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900 w-full">
+          <button type="submit" class="bg-indigo-600 px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+          </button>
+        </form>
+      </div>
+      
+    </div>
+    
+    <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400 text-sm mb-4 md:mb-0">
+        © 2023 BLUEPIXEL. Seluruh hak cipta dilindungi.
+      </p>
+      <div class="flex space-x-6">
+        <a href="#" class="text-gray-400 hover:text-white transition">Kebijakan Privasi</a>
+        <a href="#" class="text-gray-400 hover:text-white transition">Syarat & Ketentuan</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function(e) {
+      e.stopPropagation();
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside or on a link
+    document.addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.remove('active');
+    });
+    
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.getElementById('mobile-menu').classList.remove('active');
+      });
+    });
+
+    // Prevent clicks inside menu from closing it
+    document.getElementById('mobile-menu').addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+
+    // Simple form submission handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // In a real implementation, you would send the form data to a server
+      // For demo purposes, we'll just show a success message
+      setTimeout(() => {
+        document.getElementById('successMessage').classList.remove('hidden');
+        this.reset();
+        
+        // Hide the success message after 5 seconds
+        setTimeout(() => {
+          document.getElementById('successMessage').classList.add('hidden');
+        }, 5000);
+      }, 1000);
+    });
+
+    const toggleBtn = document.getElementById('toggleBtn');
+    const hiddenItems = document.querySelectorAll('.more-portfolio');
+    let isExpanded = false;
+
+    toggleBtn.addEventListener('click', () => {
+        hiddenItems.forEach(item => {
+        item.classList.toggle('hidden');
+        });
+        isExpanded = !isExpanded;
+        toggleBtn.textContent = isExpanded ? 'Tutup' : 'Lihat Selengkapnya';
+    });
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+    const images = document.querySelectorAll('#portfolioItems img');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.remove('hidden');
+        });
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+        modal.classList.add('hidden');
+        }
+    });
+  </script>
+</body>
+</html>
