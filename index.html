@@ -786,22 +786,22 @@
       e.stopPropagation();
     });
 
-    // Simple form submission handler
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+    // Bagian ini dikomentari karena tidak ada elemen dengan ID 'contactForm'
+    // document.getElementById('contactForm').addEventListener('submit', function(e) {
+    //   e.preventDefault();
       
-      // In a real implementation, you would send the form data to a server
-      // For demo purposes, we'll just show a success message
-      setTimeout(() => {
-        document.getElementById('successMessage').classList.remove('hidden');
-        this.reset();
+    //   // In a real implementation, you would send the form data to a server
+    //   // For demo purposes, we'll just show a success message
+    //   setTimeout(() => {
+    //     document.getElementById('successMessage').classList.remove('hidden');
+    //     this.reset();
         
-        // Hide the success message after 5 seconds
-        setTimeout(() => {
-          document.getElementById('successMessage').classList.add('hidden');
-        }, 5000);
-      }, 1000);
-    });
+    //     // Hide the success message after 5 seconds
+    //     setTimeout(() => {
+    //       document.getElementById('successMessage').classList.add('hidden');
+    //     }, 5000);
+    //   }, 1000);
+    // });
 
     const toggleBtn = document.getElementById('toggleBtn');
     const hiddenItems = document.querySelectorAll('.more-portfolio');
@@ -814,6 +814,7 @@
         isExpanded = !isExpanded;
         toggleBtn.textContent = isExpanded ? 'Tutup' : 'Lihat Selengkapnya';
     });
+
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
     const closeModal = document.getElementById('closeModal');
